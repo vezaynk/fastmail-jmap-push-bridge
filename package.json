@@ -1,0 +1,24 @@
+{
+  "name": "fastmail-jmap-push-bridge",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Cloudflare Worker: Fastmail JMAP PushSubscription → decrypt Web Push → forward email to Grok Bot webhook",
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "test": "tsx --test test/webpush-decrypt.test.ts",
+    "keygen": "node scripts/keygen.mjs",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20240919.0",
+    "typescript": "^5.6.2",
+    "wrangler": "^3.78.0",
+    "tsx": "^4.19.0"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "license": "MIT"
+}
