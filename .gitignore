@@ -1,0 +1,16 @@
+node_modules/
+dist/
+.wrangler/
+.dev.vars
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+.DS_Store
+coverage/
+*.log
+.turbo/
+
+.secrets/
+.dev.vars

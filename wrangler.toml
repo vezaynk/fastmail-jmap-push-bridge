@@ -1,0 +1,28 @@
+name = "fastmail-jmap-push-bridge"
+main = "src/index.ts"
+compatibility_date = "2024-09-23"
+compatibility_flags = ["nodejs_compat"]
+
+# Create with: wrangler kv:namespace create STATE
+# Then replace id below (preview_id optional for local/dev).
+[[kv_namespaces]]
+binding = "STATE"
+id = "8e09bb37f6094aa39bf3c414a63ebb3d"
+# preview_id = "REPLACE_WITH_PREVIEW_KV_NAMESPACE_ID"
+
+# Secrets (set via `wrangler secret put <NAME>`):
+#   FASTMAIL_JMAP_TOKEN
+#   GROK_BOT_WEBHOOK_URL
+#   GROK_BOT_WEBHOOK_AUTH
+#   ADMIN_TOKEN
+#   PUSH_UA_PRIVATE_JWK   # JWK JSON string for UA ECDH private key (crv P-256)
+#   PUSH_P256DH           # UA public key, uncompressed point, base64url
+#   PUSH_AUTH             # 16-byte auth secret, base64url
+#
+# Optional vars (can also be secrets):
+#   PUBLIC_BASE_URL       # e.g. https://fastmail-jmap-push-bridge.<account>.workers.dev
+#   FROM_ALLOWLIST        # comma-separated email addresses; empty = allow all
+
+[vars]
+# PUBLIC_BASE_URL = "https://fastmail-jmap-push-bridge.example.workers.dev"
+# FROM_ALLOWLIST = ""
