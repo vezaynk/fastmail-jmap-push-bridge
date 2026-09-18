@@ -1,9 +1,2 @@
-FASTMAIL_JMAP_TOKEN=
-GROK_BOT_WEBHOOK_URL=
-GROK_BOT_WEBHOOK_AUTH=
-ADMIN_TOKEN=
-PUSH_UA_PRIVATE_JWK=
-PUSH_P256DH=
-PUSH_AUTH=
-PUBLIC_BASE_URL=
-FROM_ALLOWLIST=
+# Copy to .dev.vars for `wrangler dev` (wrangler reads .dev.vars).
+# See .dev.vars.example
